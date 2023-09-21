@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/opt/apache-maven-3.6.3/bin
 export PATH=$PATH:/opt/gradle-6.1.1/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -111,3 +112,7 @@ export PATH=$PATH:/opt/gradle-6.1.1/bin
 # Example aliases
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
